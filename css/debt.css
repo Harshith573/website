@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #0a2351;
+    color: #eec008;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .summary {
+    border: 5px dashed black;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    margin-right: 1rem;
+    background-color: #f2f2f2;
+    padding: 1rem;
+  }
+  
+  .summary h2 {
+    margin-top: 0;
+  }
+  
+  .amount-owed,
+  .amount-collected {
+    margin-bottom: 1rem;
+  }
+  
+  .amount-owed h3,
+  .amount-collected h3 {
+    margin-top: 0;
+  }
+  
+  .amount-owed p,
+  .amount-collected p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .add-debt {
+    flex: 1 1 300px;
+    margin-right: 1rem;
+  }
+  
+  .add-debt h2 {
+    margin-top: 0;
+  }
+  
+  form {
+    background-color: #f2f2f2;
+    padding: 1rem;
+  }
+  
+  form label,
+  form input,
+  form select,
+  form button {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input[type="text"],
+  form input[type="number"],
+  form select {
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+  }
+  
+  form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+  
+  .debt-list {
+    flex: 2 1 400px;
+  }
+  
+  .debt-list h2 {
+    margin-top: 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #333;
+    color: white;
+  }
+  
+  th:first-child,
+  td:first-child {
+    width: 40%;
+  }
+  
+  th:last-child,
+  td:last-child {
+    width: 20%;
+  }
+  
+  td:last-child button {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  td:last-child button:hover {
+    background-color: #555;
+  }
+  

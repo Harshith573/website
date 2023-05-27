@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Barriecito|Lora&display=swap');
+
+* {
+    margin: 1100;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #eec008;
+    font-family: 'Candara', serif;
+}
+.insert{
+    color: #eec008;
+}
+.wrapper {
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    background-color: #0a2351;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+    font-size: 4rem;
+    font-family: 'Barriecito', cursive;
+    margin-bottom: 2rem;
+    clip-path: polygon(0 0,100% 0,100% 80%,50% 100%,0 80%);
+}
+
+form {
+    margin: 0 auto;
+    background-color: #0a2351;
+    border: 4px dashed #eec008;
+    width: 35%;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+label {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-right: 1.0rem;
+}
+
+.fas {
+    font-size: 1rem;
+    margin-right: .4rem;
+}
+
+input {
+    margin: .8rem 2rem 2rem 0;
+    display: block;
+    color: #eec008;
+    font-size: 1.1rem;
+    border: none;
+    border-bottom: 3px solid #eec008;
+    width: 75%;
+    background-color: #0a2351;
+}
+
+input::placeholder {
+    color: #696969;
+}
+
+input:focus {
+    color: #eec008;
+    outline: none;
+    border-bottom: 3px solid #eec008;
+}
+
+#addTip {
+    border: none;
+    background-color: #0a2351;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #eec008;
+    font-family: 'Lora', serif;
+}
+
+#addTip:hover {
+    color: #996515;
+    cursor: pointer;
+}
+
+#tipInput {
+    display: none;
+    transition: display 3s ease-in;
+}
+
+#tipPercent {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+#switchTip {
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.buttonSpace {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.buttonSpace button {
+    margin-top: 1rem;
+    border-radius: 10px;
+    display: inline-block;
+    padding: .5rem 4rem;
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+#splitBtn {
+    transition: .3s;
+    background-color: #3a9bdc;
+    color: #fff;
+}
+
+#splitBtn:hover {
+    border: 2px solid #3a9bdc;
+    background-color: #fff;
+    letter-spacing: .2rem;
+    color: #2E3F51;
+}
+
+#resetBtn {
+    background-color: #2E3F51;
+    color: white;
+}
+#perPerson::before {
+    content: "$";
+  }
+  
+#perPerson {
+    padding-top: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+    text-align: center;
+    color: #eec008;
+}
+
+footer {
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+/*  =============== . MEDIA QUERIES ============ */
+@media screen and (max-width: 992px) {
+    .insert {
+        width: 80%;
+    }
+
+    label {
+        display: block;
+    }
+
+    #submit {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .insert {
+        width: 90%;
+    }
+
+    .buttonSpace button {
+        width: 90%;
+        display: inline-table;
+
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Insights</title>
+    <link rel="stylesheet" href="css/insights.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Financial Insights</h1>
+        <form id="financialForm">
+            <div class="input-group">
+                <label for="income">Income:</label>
+                <input type="number" id="income" placeholder="Enter income" required>
+            </div>
+            <div class="input-group">
+                <label for="expenses">Expenses:</label>
+                <input type="number" id="expenses" placeholder="Enter expenses" required>
+            </div>
+            <div class="input-group">
+                <label for="debts">Debts:</label>
+                <input type="number" id="debts" placeholder="Enter debts" required>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div class="financial-data">
+            <h2>Financial Data</h2>
+            <table id="financialTable">
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>Income</td>
+                    <td id="incomeValue"></td>
+                </tr>
+                <tr>
+                    <td>Expenses</td>
+                    <td id="expensesValue"></td>
+                </tr>
+                <tr>
+                    <td>Debts</td>
+                    <td id="debtsValue"></td>
+                </tr>
+                <tr>
+                    <td>Savings</td>
+                    <td id="savingsValue"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="chartContainer"></div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
+    <script>
+        document.getElementById('financialForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const income = parseFloat(document.getElementById('income').value);
+            const expenses = parseFloat(document.getElementById('expenses').value);
+            const debts = parseFloat(document.getElementById('debts').value);
+            const savings = income - expenses - debts;
+
+            document.getElementById('incomeValue').textContent = '$' + income.toFixed(2);
+            document.getElementById('expensesValue').textContent = '$' + expenses.toFixed(2);
+            document.getElementById('debtsValue').textContent = '$' + debts.toFixed(2);
+            document.getElementById('savingsValue').textContent = '$' + savings.toFixed(2);
+
+            // Update pie chart
+            updatePieChart(income, expenses, debts, savings);
+        });
+
+        function updatePieChart(income, expenses, debts, savings) {
+            const chartOptions = {
+                series: [income, expenses, debts, savings],
+                labels: ['Income', 'Expenses', 'Debts', 'Savings'],
+                colors: ['#4CAF50', '#F44336', '#FFC107', '#2196F3'],
+                chart: {
+                    type: 'donut',
+                },
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'top'
+                        }
+                    }
+                }]
+            };
+
+            const chart = new ApexCharts(document.getElementById('chartContainer'), chartOptions);
+            chart.render();
+        }
+    </script>
+</body>
+
+</html>

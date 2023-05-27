@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debt Management</title>
+    <link rel="stylesheet" href="css/debt.css">
+</head>
+<body style="background-color: #eec008;">
+    <header>
+        <h1>Debt Management</h1>
+    </header>
+    <div class="container">
+        <div class="summary">
+            <h2>Debt Summary</h2>
+            <div class="amount-owed">
+                <h3>Amount Owed</h3>
+                <p id="owed-amount">$0.00</p>
+            </div>
+            <div class="amount-collected">
+                <h3>Amount Collected</h3>
+                <p id="collected-amount">$0.00</p>
+            </div>
+        </div>
+        <div class="add-debt">
+            <h2>Add New Debt</h2>
+            <form>
+                <div class="form-group">
+                    <label for="debtor-name">Debtor Name:</label>
+                    <input type="text" id="debtor-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="debt-amount">Debt Amount:</label>
+                    <input type="number" id="debt-amount" step="0.01" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="debt-type">Debt Type:</label>
+                    <select id="debt-type">
+                        <option value="owed-to-me">Owed to me</option>
+                        <option value="owed-by-me">Owed by me</option>
+                    </select>
+                </div>
+                <button type="submit" id="add-debt-button">Add Debt</button>
+            </form>
+        </div>
+        <div class="debt-list">
+            <h2>Debt List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Debtor Name</th>
+                        <th>Debt Amount</th>
+                        <th>Debt Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="debt-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="debt.js"></script>
+</body>
+</html>

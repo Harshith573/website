@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment Reminder</title>
+    <link rel="stylesheet" type="text/css" href="css/paymentreminder.css">
+</head>
+
+<body style="background-color: #caf0f8;">
+    <header>
+        <h1 style="text-align: center; color: #eec008;">Payments Reminder</h1>
+    </header>
+    <main>
+        <section>
+            <h2 style="color: #0a2351;">Upcoming Payments</h2>
+            <ul id="payments">
+                <!-- Payment items will be added dynamically with JavaScript -->
+            </ul>
+        </section>
+        <section>
+            <h2 style="text-align:center; color: #0a2351;">Add Payment</h2>
+            <form id="addPaymentForm"
+                style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                <label for="paymentName">Person/Organisation to be paid:</label>
+                <input type="text" id="paymentName" required>
+                <label for="paymentAmount">Amount:</label>
+                <input type="number" id="paymentAmount" required>
+                <label for="paymentDate">Due Date:</label>
+                <input type="date" id="paymentDate" required>
+                <button type="submit">Add Payment</button>
+            </form>
+
+        </section>
+    </main>
+    <div class="foot">
+    <footer>
+        <p>&copy; Split Kar</p>
+    </footer>
+    </div>
+    <script src="paymentreminder.js"></script>
+</body>
+
+</html>
